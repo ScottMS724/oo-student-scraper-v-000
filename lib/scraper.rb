@@ -33,7 +33,7 @@ def self.scrape_index_page(index_url)
         individual_student_profile[:linkedin] = url  
       elsif url.include?("github") 
         individual_student_profile[:github] = url  
-      else student[:blog] = url 
+      else individual_student_profile[:blog] = url 
       end 
       individual_student_profile[:profile_quote] = doc.css(".profile-quote").text
       individual_student_profile[:bio] = doc.css(".bio-block .bio-content .description-holder p").text
